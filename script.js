@@ -90,6 +90,8 @@ class Stopwatch extends React.Component {
     }
 }
 
+ReactDOM.render(<Stopwatch />, document.getElementById('app'));
+
         /*
         const stopwatch = new Stopwatch(
             document.querySelector('.stopwatch'),
