@@ -63,7 +63,7 @@ class Stopwatch extends React.Component {
         this.running = false;
         clearInterval(this.watch);
     }
-
+/*
     save() {
         function saveResult() {
             let time = document.createElement('li');
@@ -76,7 +76,7 @@ class Stopwatch extends React.Component {
         else {
             console.log('Błąd zapisu czasu');
         }
-    }
+    } */
 }
 
 const stopwatch = new Stopwatch(
