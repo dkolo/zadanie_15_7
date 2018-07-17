@@ -83,11 +83,11 @@ class Stopwatch extends React.Component {
             <div className={'stopwatch'}></div>
             <nav className={'controls'}>
                 <a href={'#'} className={'button'} id={'start'}>Start</a>
-            </nav>
-            
+                <a href={'#'} className={'button'} id={'stop'}>Stop</a>
+            </nav>       
                 )
-            }
-        }
+    }
+}
 
         /*
         const stopwatch = new Stopwatch(
