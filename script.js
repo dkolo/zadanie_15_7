@@ -80,8 +80,9 @@ class Stopwatch extends React.Component {
 
     render() {
         return (
-            <div className={stopwatch}></div>
-            <nav className={controls}>
+            <div className={'stopwatch'}></div>
+            <nav className={'controls'}>
+                <a href={'#'} className={'button'} id={'start'}>Start</a>
             </nav>
             
                 )
