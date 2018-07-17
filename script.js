@@ -9,8 +9,10 @@ function pad0(value) {
 class Stopwatch extends React.Component {
     constructor(props) {
         super(props);
-        this.running = false;
-        this.display = display;
+        this.state = {
+            running: false,
+            display: display
+        }
         this.reset();
         this.print(this.times);
     }
