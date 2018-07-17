@@ -63,34 +63,45 @@ class Stopwatch extends React.Component {
         this.running = false;
         clearInterval(this.watch);
     }
-/*
-    save() {
-        function saveResult() {
-            let time = document.createElement('li');
-            time.innerHTML = this.format(this.times);
-            results.appendChild(time);
+    /*
+        save() {
+            function saveResult() {
+                let time = document.createElement('li');
+                time.innerHTML = this.format(this.times);
+                results.appendChild(time);
+            }
+            if (this.format(this.times) !== '00:00:00') {
+                saveResult.call(this);
+            }
+            else {
+                console.log('Błąd zapisu czasu');
+            }
+        } */
+
+    render() {
+        return (
+            <div className={stopwatch}></div>
+            <nav className={controls}>
+            </nav>
+            
+                )
+            }
         }
-        if (this.format(this.times) !== '00:00:00') {
-            saveResult.call(this);
-        }
-        else {
-            console.log('Błąd zapisu czasu');
-        }
-    } */
-}
 
-const stopwatch = new Stopwatch(
-    document.querySelector('.stopwatch'),
-    document.getElementById('results'));
-
-let startButton = document.getElementById('start');
-startButton.addEventListener('click', () => stopwatch.start());
-
-let stopButton = document.getElementById('stop');
-stopButton.addEventListener('click', () => stopwatch.stop());
-
-let resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', () => stopwatch.reset());
-
-let saveButton = document.getElementById('save');
-saveButton.addEventListener('click', () => stopwatch.save());
+        /*
+        const stopwatch = new Stopwatch(
+            document.querySelector('.stopwatch'),
+            document.getElementById('results'));
+        
+        let startButton = document.getElementById('start');
+        startButton.addEventListener('click', () => stopwatch.start());
+        
+        let stopButton = document.getElementById('stop');
+        stopButton.addEventListener('click', () => stopwatch.stop());
+        
+        let resetButton = document.getElementById('reset');
+        resetButton.addEventListener('click', () => stopwatch.reset());
+        
+        let saveButton = document.getElementById('save');
+        saveButton.addEventListener('click', () => stopwatch.save());
+*/
