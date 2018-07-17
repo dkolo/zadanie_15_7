@@ -6,8 +6,9 @@ function pad0(value) {
     return result;
 }
 
-class Stopwatch {
-    constructor(display) {
+class Stopwatch extends React.Component {
+    constructor(props) {
+        super(props);
         this.running = false;
         this.display = display;
         this.reset();
