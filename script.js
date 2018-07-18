@@ -63,49 +63,19 @@ class Stopwatch extends React.Component {
         this.running = false;
         clearInterval(this.watch);
     }
-    /*
-        save() {
-            function saveResult() {
-                let time = document.createElement('li');
-                time.innerHTML = this.format(this.times);
-                results.appendChild(time);
-            }
-            if (this.format(this.times) !== '00:00:00') {
-                saveResult.call(this);
-            }
-            else {
-                console.log('Błąd zapisu czasu');
-            }
-        } */
 
     render() {
         return (
+            <div>
             <div className={'stopwatch'}></div>
             <nav className={'controls'}>
                 <a href={'#'} className={'button'} id={'start'} onClick={this.start}>Start</a>
                 <a href={'#'} className={'button'} id={'stop'} onClick={this.stop}>Stop</a>
             </nav>
             <ul className={'results'} id={'results'}></ul>
+            </div>
                 )
     }
 }
 
 ReactDOM.render(<Stopwatch />, document.getElementById('app'));
-
-        /*
-        const stopwatch = new Stopwatch(
-            document.querySelector('.stopwatch'),
-            document.getElementById('results'));
-        
-        let startButton = document.getElementById('start');
-        startButton.addEventListener('click', () => stopwatch.start());
-        
-        let stopButton = document.getElementById('stop');
-        stopButton.addEventListener('click', () => stopwatch.stop());
-        
-        let resetButton = document.getElementById('reset');
-        resetButton.addEventListener('click', () => stopwatch.reset());
-        
-        let saveButton = document.getElementById('save');
-        saveButton.addEventListener('click', () => stopwatch.save());
-*/
