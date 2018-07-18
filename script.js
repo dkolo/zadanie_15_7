@@ -35,14 +35,14 @@ class Stopwatch extends React.Component {
     }
 
     start() {
-        if (!this.running) {
-            this.running = true;
+        if (!this.state.running) {
+            this.state.running = true;
             this.watch = setInterval(() => this.step(), 10);
         }
     }
 
     step() {
-        if (!this.running) return;
+        if (!this.state.running) return;
         this.calculate();
         this.print();
     }
@@ -60,7 +60,7 @@ class Stopwatch extends React.Component {
     }
 
     stop() {
-        this.running = false;
+        this.state.running = false;
         clearInterval(this.watch);
     }
 
