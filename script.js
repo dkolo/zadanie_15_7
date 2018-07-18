@@ -7,7 +7,7 @@ function pad0(value) {
 }
 
 class Stopwatch extends React.Component {
-    constructor(props) {
+    constructor(props, display) {
         super(props);
         this.state = {
             running: false,
@@ -27,7 +27,7 @@ class Stopwatch extends React.Component {
     }
 
     print() {
-        this.display.innerText = this.format(this.times);
+        this.state.display.innerText = this.format(this.times);
     }
 
     format(times) {

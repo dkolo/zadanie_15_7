@@ -19,7 +19,7 @@ function pad0(value) {
 var Stopwatch = function (_React$Component) {
     _inherits(Stopwatch, _React$Component);
 
-    function Stopwatch(props) {
+    function Stopwatch(props, display) {
         _classCallCheck(this, Stopwatch);
 
         var _this = _possibleConstructorReturn(this, (Stopwatch.__proto__ || Object.getPrototypeOf(Stopwatch)).call(this, props));
@@ -46,7 +46,7 @@ var Stopwatch = function (_React$Component) {
     }, {
         key: 'print',
         value: function print() {
-            this.display.innerText = this.format(this.times);
+            this.state.display.innerText = this.format(this.times);
         }
     }, {
         key: 'format',
